@@ -3,18 +3,6 @@
 	"EngineAssociation": "4.22",
 	"Category": "",
 	"Description": "",
-	"Modules": [
-		{
-			"Name": "Bioshock",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"AIModule",
-				"Engine",
-				"NavigationSystem"
-			]
-		}
-	],
 	"Plugins": [
 		{
 			"Name": "ApexDestruction",
@@ -33,6 +21,10 @@
 			"Name": "PathFollow",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7c19d00ad42a4b67972eea383dedb7f3"
+		},
+		{
+			"Name": "Paper2D",
+			"Enabled": false
 		}
 	]
 }
