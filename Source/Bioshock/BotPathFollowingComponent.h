@@ -16,7 +16,7 @@ class BIOSHOCK_API UBotPathFollowingComponent : public UPathFollowingComponent
 {
 	GENERATED_BODY()
 
-protected:
+	protected:
 
 	UPROPERTY(transient)
 	class UCharacterMovementComponent* CharacterMovementComp;

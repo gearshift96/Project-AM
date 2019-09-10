@@ -6,16 +6,18 @@
 #include "EnvironmentQuery/Generators/EnvQueryGenerator_ProjectedPoints.h"
 #include "EQG_NearbyPoints.generated.h"
 
+
 /**
  * A custom EQS generator that creates point in a cone-like fashion everywhere except in front of the bot
  * This generator (in addition with a few in-editor tests) is used to perform a sidestep functionality
- * while the bots are shooting at each other.
+ * while the bots are shooting at the player.
  * Place an EQS testing pawn in the level and assign this generator to its EQS template to showcase the resulting points
  */
 UCLASS()
 class BIOSHOCK_API UEQG_NearbyPoints : public UEnvQueryGenerator_ProjectedPoints
 {
 	GENERATED_BODY()
+	
 	
 	virtual void GenerateItems(FEnvQueryInstance& QueryInstance) const override;
 
@@ -34,4 +36,5 @@ class BIOSHOCK_API UEQG_NearbyPoints : public UEnvQueryGenerator_ProjectedPoints
 	/* The max range of our nearby points */
 	UPROPERTY(EditAnywhere, Category = NearbyPoints)
 	float MaxRange = 500.f;
+
 };

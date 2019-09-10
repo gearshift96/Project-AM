@@ -7,7 +7,7 @@
 #include "BotController.h"
 #include "EnvironmentQuery/Items/EnvQueryItemType_Actor.h"
 
-void UEQC_GetSeeingTarget::ProvideContext(FEnvQueryInstance & QueryInstance, FEnvQueryContextData & ContextData) const
+void UEQC_GetSeeingTarget::ProvideContext(FEnvQueryInstance& QueryInstance, FEnvQueryContextData& ContextData) const
 {
 	Super::ProvideContext(QueryInstance, ContextData);
 

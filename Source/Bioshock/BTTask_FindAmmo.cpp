@@ -1,16 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "BTTask_CollectHealth.h"
+#include "BTTask_FindAmmo.h"
 #include "AICharacter.h"
 #include "CollisionQueryParams.h"
 #include "WorldCollision.h"
 #include "Engine/World.h"
-#include "HealthPack.h"
+#include "AmmoBox.h"
 #include "BotController.h"
-//#include "DrawDebugHelpers.h"
 
-EBTNodeResult::Type UBTTask_CollectHealth::ExecuteTask(UBehaviorTreeComponent & OwnerComp, uint8 * NodeMemory)
+EBTNodeResult::Type UBTTask_FindAmmo::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	Super::ExecuteTask(OwnerComp, NodeMemory);
 
@@ -35,12 +34,12 @@ EBTNodeResult::Type UBTTask_CollectHealth::ExecuteTask(UBehaviorTreeComponent & 
 		{
 			for (int32 Hit = 0; Hit < OutHits.Num(); Hit++)
 			{
-				if (OutHits[Hit].GetActor() && Cast<AHealthPack>(OutHits[Hit].GetActor()))
+				if (OutHits[Hit].GetActor() && Cast<AAmmoBox>(OutHits[Hit].GetActor()))
 				{
-					//GLog->Log("found a health pack! updating location!");
+					//GLog->Log("found an ammo box! updating location!");
 					//DrawDebugPoint(GetWorld(), OutHits[Hit].ImpactPoint, 25.f, FColor::Black, true);
-					AHealthPack* Pack = Cast<AHealthPack>(OutHits[Hit].GetActor());
-					BotCon->SetHealthPack(Pack);
+					AAmmoBox* Box = Cast<AAmmoBox>(OutHits[Hit].GetActor());
+					BotCon->SetAmmoBox(Box);
 
 					return EBTNodeResult::Succeeded;
 				}

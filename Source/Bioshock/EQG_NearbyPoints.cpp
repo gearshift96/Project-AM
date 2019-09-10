@@ -1,8 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+
 #include "EQG_NearbyPoints.h"
 
-void UEQG_NearbyPoints::GenerateItems(FEnvQueryInstance & QueryInstance) const
+void UEQG_NearbyPoints::GenerateItems(FEnvQueryInstance& QueryInstance) const
 {
 	TArray<FNavLocation> LocationCandidates;
 

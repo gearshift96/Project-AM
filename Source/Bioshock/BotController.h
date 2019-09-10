@@ -14,8 +14,8 @@ UCLASS()
 class BIOSHOCK_API ABotController : public AAIController
 {
 	GENERATED_BODY()
-	
-		private:
+
+	private:
 
 	/* Choose the closest target from the provided data */
 	void SelectTarget(const TArray<AActor*>& TargetList);
@@ -50,6 +50,7 @@ public:
 	FORCEINLINE UBehaviorTree* GetCurrentTree() { return BTAsset; }
 
 	/* Returns a reference of the enemy target that the controlled bot has currently selected */
+	UFUNCTION(BlueprintCallable, Category = "BotCon")
 	FORCEINLINE AActor* GetSelectedTarget() const;
 
 	/* This should be called when the bot is at Low HP and wishes to retreat */
@@ -64,7 +65,7 @@ public:
 protected:
 
 	/* The assigned behavior tree */
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "BehaviorTree")
 	UBehaviorTree* BTAsset;
 
 	/* Blackboard key for MoveLocation*/
@@ -87,7 +88,7 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	FName BlackboardKey_AmmoBox;
 
-	/* Blackboard key for CollectHealth */
+	/* Blackboard key for HealthPack */
 	UPROPERTY(VisibleAnywhere)
 	FName BlackboardKey_CollectHealth;
 

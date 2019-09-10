@@ -8,7 +8,7 @@
 #include "NavArea_Crouch.generated.h"
 
 /**
- * 
+ *
  */
 
 UENUM()
@@ -41,5 +41,5 @@ class BIOSHOCK_API UNavArea_Crouch : public UNavArea
 	GENERATED_BODY()
 
 	UNavArea_Crouch();
-	
+
 };

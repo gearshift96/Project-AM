@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "BehaviorTree/BTTaskNode.h"
-#include "BTTask_CollectHealth.generated.h"
+#include "BTTask_FindHealth.generated.h"
 
 /**
- * Searches for nearby Health PAcks in the area and updates the corresponding Blackboard values
- * Should probably rename this later on since its name is misleading
+ * Searches for nearby Health Packs in the area and updates the corresponding Blackboard values
  */
 UCLASS()
-class BIOSHOCK_API UBTTask_CollectHealth : public UBTTaskNode
+class BIOSHOCK_API UBTTask_FindHealth : public UBTTaskNode
 {
 	GENERATED_BODY()
 	
+
 	/*
 	 * Executes the task when we have reached the node
 	 */
@@ -22,7 +22,8 @@ class BIOSHOCK_API UBTTask_CollectHealth : public UBTTaskNode
 	
 protected:
 
-	/* The search radius the bot will try to find a health pack */
+	/* The search radius the bot will try to find an ammo box */
 	UPROPERTY(EditAnywhere)
 	float SearchRadius = 600.f;
+
 };

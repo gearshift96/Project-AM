@@ -3,6 +3,18 @@
 	"EngineAssociation": "4.22",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "Bioshock",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"AIModule",
+				"NavigationSystem"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ApexDestruction",
