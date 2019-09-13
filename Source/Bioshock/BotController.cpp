@@ -24,8 +24,6 @@
 ABotController::ABotController()
 {
 	//Keys init
-	BlackboardKey_MoveLocation = FName("MoveLocation");
-	BlackboardKey_SelectedTarget = FName("SelectedTarget");
 	BlackboardKey_ShouldRetreat = FName("ShouldRetreat");
 	BlackboardKey_CollectAmmo = FName("CollectAmmo");
 	BlackboardKey_AmmoBox = FName("AmmoBox");

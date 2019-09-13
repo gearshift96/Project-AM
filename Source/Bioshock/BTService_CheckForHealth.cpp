@@ -20,8 +20,8 @@ void UBTService_CheckForHealth::TickNode(UBehaviorTreeComponent& OwnerComp, uint
 			//GLog->Log("setting low on ammo");
 			if (Bot->LowOnHealth())
 			{
-				//GLog->Log("I need health: " + Bot->GetName());
-				//GLog->Log("Current health: " + FString::FromInt(Bot->GetCurrentHealth()));
+				GLog->Log("I need health: " + Bot->GetName());
+				GLog->Log("Current health: " + FString::FromInt(Bot->GetCurrentHealth()));
 			}
 			BotCon->SetCollectHealthStatus(Bot->LowOnHealth());
 			/*if (BotCon)

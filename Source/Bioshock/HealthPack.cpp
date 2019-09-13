@@ -12,7 +12,7 @@ void AHealthPack::OnComponentBeginOverlap(UPrimitiveComponent* OveralappedCompon
 		AAICharacter* Bot = Cast<AAICharacter>(OtherActor);
 		if (Bot)
 		{
-			//A bot came and collected this ammo box
+			//A bot came and collected this health pack
 			Bot->Heal(FMath::RandRange(100, 200));
 			Destroy();
 		}
