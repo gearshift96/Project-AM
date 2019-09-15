@@ -11,27 +11,4 @@ void UEQC_GetSeeingTarget::ProvideContext(FEnvQueryInstance& QueryInstance, FEnv
 {
 	Super::ProvideContext(QueryInstance, ContextData);
 
-	UObject* QueryOwner = (QueryInstance.Owner).Get();
-	if (QueryOwner)
-	{
-		AAICharacter* BotCharacter = Cast<AAICharacter>(QueryOwner);
-		if (BotCharacter)
-		{
-			ABotController* BotController = Cast<ABotController>(BotCharacter->GetController());
-			if (BotController)
-			{
-				//Provide the target in our context
-				if (BotController->GetSelectedTarget())
-				{
-					UEnvQueryItemType_Actor::SetContextHelper(ContextData, BotController->GetSelectedTarget());
-				}
-				else
-				{
-					//LOS bot itself since we have no target
-					UEnvQueryItemType_Actor::SetContextHelper(ContextData, BotCharacter);
-				}
-
-			}
-		}
-	}
 }

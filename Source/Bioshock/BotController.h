@@ -17,13 +17,6 @@ class BIOSHOCK_API ABotController : public AAIController
 
 	private:
 
-	/* Choose the closest target from the provided data */
-	void SelectTarget(const TArray<AActor*>& TargetList);
-
-	/* Updates the percepted actors */
-	UFUNCTION()
-	void OnPerceptionUpdated(const TArray<AActor*>& SensedActors);
-
 	/* Time in seconds in which the target selection occured */
 	float TimeSinceTargetSelection;
 
@@ -31,42 +24,7 @@ public:
 
 	ABotController();
 
-	/*
-	 * Returns the world location of the selected target.
-	 * If we haven't selected a target it will return the forward vector
-	 */
-	FVector GetSelectedTargetLocation() const;
-
-	/* Updates the blackboard value with the provided location */
-	void SetMoveToLocation(const FVector& Location);
-
-	/* Updates the blackboard value with the provided ammo box */
-	void SetAmmoBox(class AAmmoBox* AmmoBox);
-
-	/* Updates the blackboard value with the provided health pack */
-	void SetHealthPack(class AHealthPack* HealthPack);
-
-	/* Returns a reference of the behavior tree asset */
-	FORCEINLINE UBehaviorTree* GetCurrentTree() { return BTAsset; }
-
-	/* Returns a reference of the enemy target that the controlled bot has currently selected */
-	UFUNCTION(BlueprintCallable, Category = "BotCon")
-	FORCEINLINE AActor* GetSelectedTarget() const;
-
-	/* This should be called when the bot is at Low HP and wishes to retreat */
-	void InitiateRetreat();
-
-	/* In case the bot need ammo, set this to true to enable the search for ammo boxes in-game */
-	void SetCollectAmmoStatus(const bool& NewStatus);
-
-	/* In case the bot need health, set this to true to enable the search for health packs in-game */
-	void SetCollectHealthStatus(const bool& NewStatus);
-
 protected:
-
-	/* The assigned behavior tree */
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "BehaviorTree")
-	UBehaviorTree* BTAsset;
 
 	/* Blackboard key for MoveLocation*/
 	UPROPERTY(VisibleAnywhere)
