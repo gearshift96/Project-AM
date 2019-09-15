@@ -16,15 +16,12 @@ private:
 	 * Identifies is the bot can actually see the target or if the target is currently LOSing this instance
 	 * @return true - if we can see the target, false otherwise
 	 */
-	UFUNCTION(BlueprintCallable, Category = "AICharacter")
-	bool CanSeeSelectedTarget() const;
+
 
 	/* Time since this character fired */
 	float LastFireWeaponTime;
 
 	/* True if the character can fire the weapon again */
-	UFUNCTION(BlueprintCallable, Category = "AICharacter")
-	bool CanFireWeapon() const;
 
 public:
 	// Sets default values for this character's properties
@@ -39,7 +36,7 @@ public:
 	 * @param DamageCauser		The Actor that directly caused the damage (e.g. the projectile that exploded, the rock that landed on you)
 	 * @return					The amount of damage actually applied.
 	 */
-	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+	//virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 	/* Adds the given amount of ammo to this bot */
 	UFUNCTION(BlueprintCallable, Category = "AICharacter")
