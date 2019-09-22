@@ -35,7 +35,8 @@ AAmmoBox::AAmmoBox()
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(FName("CollisionBox"));
 	if (CollisionBox)
 	{
-		CollisionBox->AttachToComponent(AmmoBoxSM, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
+		//CollisionBox->AttachToComponent(AmmoBoxSM, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
+		CollisionBox->SetupAttachment(AmmoBoxSM, NAME_None);
 	}
 
 }

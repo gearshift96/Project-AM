@@ -35,7 +35,8 @@ AHealthPack::AHealthPack()
 	CollisionBox = CreateDefaultSubobject<UBoxComponent>(FName("CollisionBox"));
 	if (CollisionBox)
 	{
-		CollisionBox->AttachToComponent(HealthPackSM, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
+		//CollisionBox->AttachToComponent(HealthPackSM, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
+		CollisionBox->SetupAttachment(HealthPackSM, NAME_None);
 	}
 
 }
