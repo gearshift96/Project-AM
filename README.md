@@ -1,3 +1,3 @@
-# Bioshock
+# Project Liane  
 
-Developed with Unreal Engine 4
+Third person shooter developed with Unreal Engine 4 in C++ and blueprints
