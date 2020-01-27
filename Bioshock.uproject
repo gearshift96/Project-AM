@@ -25,11 +25,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "LadyBugTracker",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/3ba38000be0c43ecb13afaf117191b30"
-		},
-		{
 			"Name": "PathFollow",
 			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7c19d00ad42a4b67972eea383dedb7f3"
