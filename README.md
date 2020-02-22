@@ -5,5 +5,5 @@ Project LIANE is a cinematic third person shooter game made in Unrreal Engine 4.
 
 Every source code file lists contributors who've edited the file at the top of the file.
 
-Supported platforms
+Supported platforms:
 This game is officially tested on Windows 10.
