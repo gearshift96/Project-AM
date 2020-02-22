@@ -1,9 +1,12 @@
-# Project Liane (Working Title)  
 
-Third person shooter developed with Unreal Engine 4 in C++ and Unreal blueprints
+![Splash](/LianeGame.png?raw=true "Liane Game")
 
-This build features guard NPCs, written in blueprints and C++, that will run to cover if it is low on health or ammo, while attacking, and will search for the nearst health or ammo pack present in its path of retreat. The guards will also be alerted in its patrol route, by sounds caused by the player like gunshots.   
+Project LIANE is a cinematic third person shooter game made in Unrreal Engine 4. You take the role of Anna Liane, a government-funded science project, who has been genetically engineered to heal the physical wounds of people around her. Unfortunately, this ability has an adverse effect on her mental stability, effectively degrading it to the point of insanity. We then follow her through her journey as she becomes a darker character. You will be faced with many choices. Some easy, some difficult. Your job will not to pick to right or ethical one, but the one that will keep you alive.
 
-The drone, written in Unreal blueprints, patrols along a set route of waypoints and contains logic of alerting nearby allies of the player's location, within its radius if the player is in the drone's light. 
+License
+This game is licensed under the MIT license. For information, see LICENSE. This game also uses Unreal Engine 4. For that license, see UE-LICENSE.
 
-TODO:Create Logic for guard NPCs to shoot enviroment hazards (i.e. explosive barrels) that are nearest the player and within their line of sight.
+Every source code file lists contributors who've edited the file at the top of the file.
+
+Supported platforms
+This game is officially tested on Windows 10.
